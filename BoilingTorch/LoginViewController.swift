@@ -11,7 +11,7 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -40,37 +40,109 @@ class LoginViewController: UIViewController {
         
     }
     
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        if (error === nil) {
+            
+            
+            let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
+            DataService.dataService.BASE_REF.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
+                if error != nil {
+                    print("Login failed. \(error)")
+                } else {
+                    print("Logged in! \(authData)")
+                
+                    
+                    
+                    
+                    let newUser = [
+                    "provider": authData.provider,
+                    "email": authData.providerData["email"] as? NSString as? String,
+                    "username": authData.providerData["displayName"] as? NSString as? String,
+                    ]
+                    
+                    
+//                       // result["uid"] as String !
+//
+//                            let user = ["provider": authData.provider!, "email": authData.providerData["displayName"] as! NSString as String, "username": authData.providerData["displayName"] as! NSString as! String, "password": authData.providerData["displayName"] as! NSString as String]
+//
+//                            // Seal the deal in DataService.swift.
+//                           // DataService.dataService.createNewAccount(authData.uid, user: user)
+                    
+                    DataService.dataService.BASE_REF.childByAppendingPath("users").childByAppendingPath(authData.uid).setValue(newUser)
+                    
+                    
+                    NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "uid")
+                        self.performSegueWithIdentifier("CurrentlyLoggedIn", sender: nil)
+                }
+            })
+            
+            
+        } else {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        print("User logged out...")
+    }
+    
+    
     @IBAction func tryLogin(sender: AnyObject) {
         let email = emailField.text
         let password = passwordField.text
         
-        if email != "" && password != "" {
-            
-            // Login with the Firebase's authUser method
-            
-            DataService.dataService.BASE_REF.authUser(email, password: password, withCompletionBlock: { error, authData in
-                
-                if error != nil {
-                    print(error)
-                    self.loginErrorAlert("Oops!", message: "Check your username and password.")
-                } else {
+        if (self.isValidEmail(email!))
+        
+        {
+            print("valid");
+            if (password != "")
+            {
+                DataService.dataService.BASE_REF.authUser(email, password: password, withCompletionBlock: { error, authData in
                     
-                    // Be sure the correct uid is stored.
-                    
-                    NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "uid")
-                    
-                    // Enter the app!
-                    
-                    self.performSegueWithIdentifier("CurrentlyLoggedIn", sender: nil)
-                }
-            })
+                    if (error != nil) {
+                        // an error occurred while attempting login.
+                        if let errorCode = FAuthenticationError(rawValue: error.code) {
+                            switch (errorCode) {
+                            case .UserDoesNotExist:
+                                
+                                self.loginErrorAlert("Oops!", message: "invalid user.")
+                                
+                            case .InvalidEmail:
+                                self.loginErrorAlert("Oops!", message: "invalid email.")
+                                
+                            case .InvalidPassword:
+                                self.loginErrorAlert("Oops!", message: "invalid password.")
+                            
+                            default:
+                                self.loginErrorAlert("Oops!", message: "Something went wrong.")
+                            }
+                        }
+                    } else {
+                        
+                        NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "uid")
+                        
+                        // Enter the app!
+                        self.performSegueWithIdentifier("CurrentlyLoggedIn", sender: nil)
+                        
+                        // User is logged in
+                    }
+                })
+            }
+            else
+            {
+                self.loginErrorAlert("Oops!", message: "Password can't be blank.")
+            }
             
-        } else {
-            
-            // There was a problem
-            
-            loginErrorAlert("Oops!", message: "Don't forget to enter your email and password.")
         }
+        else
+        {
+            self.loginErrorAlert("Oops!", message: "This email is not valid.")
+            
+            print("This is invalid")
+        }
+        
+        
+        
         
     }
     
@@ -82,5 +154,14 @@ class LoginViewController: UIViewController {
         let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
         alert.addAction(action)
         presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    
+    func isValidEmail(testStr:String) -> Bool {
+        // println("validate calendar: \(testStr)")
+        let emailRegEx = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+        
+        let emailTest = NSPredicate(format: "SELF MATCHES%@", emailRegEx)
+        return emailTest.evaluateWithObject(testStr)
     }
 }
