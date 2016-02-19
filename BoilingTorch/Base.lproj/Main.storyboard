@@ -294,7 +294,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G41-yl-tuE">
-                                <rect key="frame" x="241" y="285" width="119" height="30"/>
+                                <rect key="frame" x="241" y="284" width="119" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Create Account"/>
                                 <connections>
@@ -304,8 +304,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRe-6c-kgf">
                                 <rect key="frame" x="269" y="323" width="63" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="63" id="Fzp-DA-SNa"/>
-                                    <constraint firstAttribute="height" constant="30" id="xol-sK-mVy"/>
+                                    <constraint firstAttribute="width" constant="63" id="drk-f7-tqE"/>
                                 </constraints>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
@@ -315,20 +314,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7jI-t1-ZbX" firstAttribute="leading" secondItem="0JY-XS-v28" secondAttribute="leading" id="ElP-uy-v0w"/>
-                            <constraint firstItem="vRe-6c-kgf" firstAttribute="centerX" secondItem="BIV-4A-o0I" secondAttribute="centerX" id="FaB-Hb-Ugh"/>
-                            <constraint firstItem="vRe-6c-kgf" firstAttribute="top" secondItem="G41-yl-tuE" secondAttribute="bottom" constant="8" symbolic="YES" id="LSi-Lt-F2e"/>
-                            <constraint firstItem="4eJ-zT-pQ1" firstAttribute="top" secondItem="vRe-6c-kgf" secondAttribute="bottom" constant="247" id="UvF-Ep-zig"/>
-                            <constraint firstItem="qPQ-FT-UdD" firstAttribute="centerX" secondItem="BIV-4A-o0I" secondAttribute="centerX" id="cRF-8D-iVd"/>
-                            <constraint firstItem="7jI-t1-ZbX" firstAttribute="top" secondItem="jae-Gw-g6M" secondAttribute="bottom" constant="132" id="dJe-nJ-dkf"/>
-                            <constraint firstItem="G41-yl-tuE" firstAttribute="centerX" secondItem="BIV-4A-o0I" secondAttribute="centerX" id="gDB-jQ-wFj"/>
-                            <constraint firstItem="vRe-6c-kgf" firstAttribute="top" secondItem="G41-yl-tuE" secondAttribute="bottom" constant="8" id="hZL-fn-bPi"/>
-                            <constraint firstItem="7jI-t1-ZbX" firstAttribute="centerX" secondItem="BIV-4A-o0I" secondAttribute="centerX" id="heC-qu-AVM"/>
-                            <constraint firstItem="0JY-XS-v28" firstAttribute="top" secondItem="qPQ-FT-UdD" secondAttribute="bottom" constant="8" symbolic="YES" id="pLn-tA-ahM"/>
-                            <constraint firstItem="7jI-t1-ZbX" firstAttribute="leading" secondItem="qPQ-FT-UdD" secondAttribute="leading" id="rHp-5C-CAl"/>
-                            <constraint firstItem="0JY-XS-v28" firstAttribute="centerX" secondItem="BIV-4A-o0I" secondAttribute="centerX" id="sip-bx-DeI"/>
-                            <constraint firstItem="G41-yl-tuE" firstAttribute="top" secondItem="0JY-XS-v28" secondAttribute="bottom" constant="19" id="smj-lq-hCC"/>
-                            <constraint firstItem="qPQ-FT-UdD" firstAttribute="top" secondItem="7jI-t1-ZbX" secondAttribute="bottom" constant="16" id="zaM-qs-t27"/>
+                            <constraint firstItem="7jI-t1-ZbX" firstAttribute="trailing" secondItem="0JY-XS-v28" secondAttribute="trailing" id="7fh-4e-XAA"/>
+                            <constraint firstItem="qPQ-FT-UdD" firstAttribute="top" secondItem="7jI-t1-ZbX" secondAttribute="bottom" constant="16" id="A7r-83-SUy"/>
+                            <constraint firstItem="7jI-t1-ZbX" firstAttribute="centerX" secondItem="G41-yl-tuE" secondAttribute="centerX" id="Ds4-VA-GPY"/>
+                            <constraint firstItem="7jI-t1-ZbX" firstAttribute="centerX" secondItem="vRe-6c-kgf" secondAttribute="centerX" id="Js7-T8-TKp"/>
+                            <constraint firstItem="7jI-t1-ZbX" firstAttribute="trailing" secondItem="qPQ-FT-UdD" secondAttribute="trailing" id="ZLk-2B-AnE"/>
+                            <constraint firstItem="7jI-t1-ZbX" firstAttribute="leading" secondItem="0JY-XS-v28" secondAttribute="leading" id="a32-35-lih"/>
+                            <constraint firstItem="4eJ-zT-pQ1" firstAttribute="top" secondItem="vRe-6c-kgf" secondAttribute="bottom" constant="247" id="c7S-KB-pGO"/>
+                            <constraint firstItem="0JY-XS-v28" firstAttribute="top" secondItem="qPQ-FT-UdD" secondAttribute="bottom" constant="8" symbolic="YES" id="cMs-Z5-F5S"/>
+                            <constraint firstItem="7jI-t1-ZbX" firstAttribute="leading" secondItem="qPQ-FT-UdD" secondAttribute="leading" id="gt2-mP-e4w"/>
+                            <constraint firstItem="7jI-t1-ZbX" firstAttribute="centerX" secondItem="BIV-4A-o0I" secondAttribute="centerX" id="sAd-Pr-DiK"/>
+                            <constraint firstItem="7jI-t1-ZbX" firstAttribute="top" secondItem="jae-Gw-g6M" secondAttribute="bottom" constant="132" id="trT-Zj-mm6"/>
+                            <constraint firstItem="vRe-6c-kgf" firstAttribute="top" secondItem="G41-yl-tuE" secondAttribute="bottom" constant="6" id="vY7-gz-3No"/>
                         </constraints>
                     </view>
                     <connections>
@@ -369,6 +366,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Yxl-1P-n8a"/>
+        <segue reference="HgL-fi-JE9"/>
     </inferredMetricsTieBreakers>
 </document>
