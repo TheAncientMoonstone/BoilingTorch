@@ -11,6 +11,7 @@
 		2E3EDA341C6407EE00A10C44 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3EDA331C6407EE00A10C44 /* Constants.swift */; };
 		2E3EDA361C6408F500A10C44 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3EDA351C6408F400A10C44 /* DataService.swift */; };
 		2E3EDA381C642AD600A10C44 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3EDA371C642AD600A10C44 /* CreateAccountViewController.swift */; };
+		2E42A8FD1C7D4E9F00EF5050 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E42A8FC1C7D4E9F00EF5050 /* MoreTableViewController.swift */; };
 		2E4BC8071C61B13800387F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4BC8061C61B13800387F7B /* AppDelegate.swift */; };
 		2E4BC8091C61B13800387F7B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4BC8081C61B13800387F7B /* FirstViewController.swift */; };
 		2E4BC80B1C61B13800387F7B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4BC80A1C61B13800387F7B /* SecondViewController.swift */; };
@@ -19,7 +20,6 @@
 		2E4BC8131C61B13800387F7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E4BC8111C61B13800387F7B /* LaunchScreen.storyboard */; };
 		2E7F4F061C61BA8700837888 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F4F051C61BA8700837888 /* LoginViewController.swift */; };
 		2EADD67B1C671FCE00CDE9FF /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EADD67A1C671FCE00CDE9FF /* ThirdViewController.swift */; };
-		2EADD67D1C671FE500CDE9FF /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EADD67C1C671FE500CDE9FF /* FourthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +27,7 @@
 		2E3EDA331C6407EE00A10C44 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2E3EDA351C6408F400A10C44 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		2E3EDA371C642AD600A10C44 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		2E42A8FC1C7D4E9F00EF5050 /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		2E4BC8031C61B13800387F7B /* BoilingTorch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoilingTorch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E4BC8061C61B13800387F7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E4BC8081C61B13800387F7B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		2E7F4F021C61B36800837888 /* BoilingTorch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BoilingTorch-Bridging-Header.h"; sourceTree = "<group>"; };
 		2E7F4F051C61BA8700837888 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2EADD67A1C671FCE00CDE9FF /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		2EADD67C1C671FE500CDE9FF /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		8FDBD4D63D416EDA65E5F122 /* Pods-BoilingTorch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoilingTorch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoilingTorch/Pods-BoilingTorch.debug.xcconfig"; sourceTree = "<group>"; };
 		9EBEC75DFFB8CE22B2CEF6ED /* Pods_BoilingTorch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoilingTorch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -85,10 +85,12 @@
 			isa = PBXGroup;
 			children = (
 				2E4BC8061C61B13800387F7B /* AppDelegate.swift */,
-				2E4BC8081C61B13800387F7B /* FirstViewController.swift */,
-				2E4BC80A1C61B13800387F7B /* SecondViewController.swift */,
 				2E7F4F051C61BA8700837888 /* LoginViewController.swift */,
 				2E3EDA371C642AD600A10C44 /* CreateAccountViewController.swift */,
+				2E4BC8081C61B13800387F7B /* FirstViewController.swift */,
+				2E4BC80A1C61B13800387F7B /* SecondViewController.swift */,
+				2EADD67A1C671FCE00CDE9FF /* ThirdViewController.swift */,
+				2E42A8FC1C7D4E9F00EF5050 /* MoreTableViewController.swift */,
 				2E4BC80C1C61B13800387F7B /* Main.storyboard */,
 				2E4BC80F1C61B13800387F7B /* Assets.xcassets */,
 				2E4BC8111C61B13800387F7B /* LaunchScreen.storyboard */,
@@ -96,8 +98,6 @@
 				2E7F4F021C61B36800837888 /* BoilingTorch-Bridging-Header.h */,
 				2E3EDA331C6407EE00A10C44 /* Constants.swift */,
 				2E3EDA351C6408F400A10C44 /* DataService.swift */,
-				2EADD67A1C671FCE00CDE9FF /* ThirdViewController.swift */,
-				2EADD67C1C671FE500CDE9FF /* FourthViewController.swift */,
 			);
 			path = BoilingTorch;
 			sourceTree = "<group>";
@@ -234,9 +234,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E3EDA381C642AD600A10C44 /* CreateAccountViewController.swift in Sources */,
+				2E42A8FD1C7D4E9F00EF5050 /* MoreTableViewController.swift in Sources */,
 				2E3EDA341C6407EE00A10C44 /* Constants.swift in Sources */,
 				2E7F4F061C61BA8700837888 /* LoginViewController.swift in Sources */,
-				2EADD67D1C671FE500CDE9FF /* FourthViewController.swift in Sources */,
 				2E4BC80B1C61B13800387F7B /* SecondViewController.swift in Sources */,
 				2E3EDA361C6408F500A10C44 /* DataService.swift in Sources */,
 				2E4BC8071C61B13800387F7B /* AppDelegate.swift in Sources */,
