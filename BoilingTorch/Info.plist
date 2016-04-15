@@ -8,7 +8,6 @@
             <key>CFBundleURLSchemes</key>
             <array>
                 <string>fb487030211470012</string>
-                <string>fbauth2</string>
             </array>
         </dict>
     </array>
