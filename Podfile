@@ -6,7 +6,7 @@ target :BoilingTorch, :exclusive => true do
 		pod 'Firebase', '>=2.5.0'
 		pod 'FBSDKCoreKit'
 		pod 'FBSDKLoginKit'
-		pod 'AsyncDisplayKit'
+		pod 'Tapglue'
 		use_frameworks!
 
 end		

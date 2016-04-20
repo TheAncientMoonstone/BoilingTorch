@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Tapglue
 
 class FirstViewController: UIViewController {
 
@@ -20,10 +21,13 @@ class FirstViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func userLogout(sender: AnyObject) {
+    
+    /* 
+        Function to be refined later down the track
+    
+        @IBAction func userLogout(sender: AnyObject) {
         
     }
-
+        */
 }
 
