@@ -15,8 +15,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    // @IBOutlet weak var loginButton: FBSDKLoginButton!
     @IBOutlet weak var loginButton: FBSDKLoginButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let loginButton: FBSDKLoginButton = FBSDKLoginButton()
