@@ -44,11 +44,6 @@ class CreateAccountViewController: UIViewController {
                     
                 } else {
                     
-//                    let user = ["provider": password!, "email": email!, "username": username!]
-//
-//                    let struid = result["uid"] as String !
-                    
-                    // Create and Login the New User with authUser
                     DataService.dataService.BASE_REF.authUser(email, password: password, withCompletionBlock: {
                         err, authData in
                         

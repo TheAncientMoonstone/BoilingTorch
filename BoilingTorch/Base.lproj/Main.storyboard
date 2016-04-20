@@ -5,17 +5,18 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--FirstNavigationContoller-->
+        <!--First Navigation Contoller-->
         <scene sceneID="G77-0T-cJY">
             <objects>
-                <navigationController title="FirstNavigationContoller" id="vLa-kV-YbX" sceneMemberID="viewController">
+                <navigationController title="First Navigation Contoller" id="vLa-kV-YbX" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="First" image="first" id="Mqz-ox-1xf"/>
                     <keyCommands/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="yQS-Wa-AnZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yQS-Wa-AnZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0078431372549019607" green="0.41960784313725491" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="Ah3-qT-Ros"/>
@@ -72,17 +73,17 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipH-cv-D8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2400" y="1870"/>
+            <point key="canvasLocation" x="1470" y="1152"/>
         </scene>
-        <!--More-->
+        <!--More Navigation Controller-->
         <scene sceneID="YWV-Uw-iNI">
             <objects>
-                <navigationController id="Rlo-0I-sLf" sceneMemberID="viewController">
+                <navigationController title="More Navigation Controller" id="Rlo-0I-sLf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="More" id="v7m-T6-Eyf"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="FFD-3B-Hu1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0078431372549019607" green="0.41960784313725491" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Dhk-Mp-tmU" kind="relationship" relationship="rootViewController" id="3V3-pJ-5eG"/>
@@ -90,17 +91,18 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZYX-9E-oI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312" y="1870"/>
+            <point key="canvasLocation" x="772" y="1174"/>
         </scene>
-        <!--Third-->
+        <!--Third Navigation Controller-->
         <scene sceneID="Qyx-9M-2IJ">
             <objects>
-                <navigationController id="OOI-2l-bap" sceneMemberID="viewController">
+                <navigationController title="Third Navigation Controller" id="OOI-2l-bap" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Third" id="LM5-R2-cVe"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="kxC-Jw-Ypa">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kxC-Jw-Ypa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0078431372549019607" green="0.41960784313725491" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="djj-du-z7o" kind="relationship" relationship="rootViewController" id="8jj-Eq-ilb"/>
@@ -110,10 +112,10 @@
             </objects>
             <point key="canvasLocation" x="-809" y="1621"/>
         </scene>
-        <!--Third-->
+        <!--Third View Controller-->
         <scene sceneID="bKB-th-dKW">
             <objects>
-                <viewController title="Third" id="djj-du-z7o" customClass="ThirdViewController" customModule="BoilingTorch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Third View Controller" id="djj-du-z7o" customClass="ThirdViewController" customModule="BoilingTorch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QXt-fL-r1e"/>
                         <viewControllerLayoutGuide type="bottom" id="TAf-au-80W"/>
@@ -130,15 +132,16 @@
             </objects>
             <point key="canvasLocation" x="85" y="1621"/>
         </scene>
-        <!--Second-->
+        <!--SecondNavigationController-->
         <scene sceneID="ujQ-il-Jx0">
             <objects>
-                <navigationController id="Oq8-iq-imx" sceneMemberID="viewController">
+                <navigationController title="SecondNavigationController" id="Oq8-iq-imx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="EZA-CO-fSC"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="wVN-Ay-yhx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wVN-Ay-yhx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0078431372549019607" green="0.41960784313725491" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="gnf-ID-9Ue"/>
@@ -293,6 +296,7 @@
                     </view>
                     <connections>
                         <outlet property="emailField" destination="zB5-Dg-PDb" id="m7y-wH-WJJ"/>
+                        <outlet property="loginButton" destination="fNf-YM-yub" id="gDm-au-nHf"/>
                         <outlet property="passwordField" destination="cmD-tX-pX5" id="eTh-jC-ABW"/>
                         <segue destination="49e-Tb-3d3" kind="show" identifier="CurrentlyLoggedIn" id="Yxl-1P-n8a"/>
                     </connections>
@@ -386,6 +390,7 @@
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="1" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="vLa-kV-YbX" kind="relationship" relationship="viewControllers" id="SsO-Bo-369"/>

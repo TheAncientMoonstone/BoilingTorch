@@ -15,8 +15,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    // @IBOutlet weak var loginButton: FBSDKLoginButton!
     @IBOutlet weak var loginButton: FBSDKLoginButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let loginButton: FBSDKLoginButton = FBSDKLoginButton()
@@ -51,22 +51,11 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 } else {
                     print("Logged in! \(authData)")
                 
-                    
-                    
-                    
                     let newUser = [
                     "provider": authData.provider,
                     "email": authData.providerData["email"] as? NSString as? String,
                     "username": authData.providerData["displayName"] as? NSString as? String,
                     ]
-                    
-                    
-//                       // result["uid"] as String !
-//
-//                            let user = ["provider": authData.provider!, "email": authData.providerData["displayName"] as! NSString as String, "username": authData.providerData["displayName"] as! NSString as! String, "password": authData.providerData["displayName"] as! NSString as String]
-//
-//                            // Seal the deal in DataService.swift.
-//                           // DataService.dataService.createNewAccount(authData.uid, user: user)
                     
                     DataService.dataService.BASE_REF.childByAppendingPath("users").childByAppendingPath(authData.uid).setValue(newUser)
                     
@@ -158,7 +147,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     
     func isValidEmail(testStr:String) -> Bool {
-        // println("validate calendar: \(testStr)")
         let emailRegEx = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
         
         let emailTest = NSPredicate(format: "SELF MATCHES%@", emailRegEx)
